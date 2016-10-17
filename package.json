@@ -1,0 +1,108 @@
+{
+  "name": "eventloop",
+  "version": "0.0.1",
+  "description": "website for eventloop hackathon in Chile",
+  "scripts": {
+    "start": "webpack-dev-server --progress --inline --hot --colors --port 3010",
+    "build": "NODE_ENV=production webpack --progress --colors",
+    "deploy": "npm run build && gh-pages --dotfiles --dist build --branch gh-pages",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "fforres",
+  "license": "",
+  "babel": {
+    "presets": [
+      "es2015"
+    ],
+    "plugins": [
+      "transform-runtime"
+    ]
+  },
+  "eslintConfig": {
+    "presets": [
+      "airbnb"
+    ],
+    "parser": "babel-eslint",
+    "extends": [
+      "eslint-config-airbnb"
+    ],
+    "rules": {
+      "space-before-function-paren": [
+        2,
+        "always"
+      ],
+      "comma-dangle": [
+        1,
+        "never"
+      ],
+      "func-names": 1,
+      "key-spacing": 1,
+      "no-else-return": 1,
+      "no-multi-spaces": 1,
+      "no-unused-vars": 1,
+      "no-undef": 1,
+      "no-console": 0,
+      "quotes": [
+        2,
+        "single"
+      ],
+      "one-var": 1,
+      "max-len": 0,
+      "arrow-body-style": 0,
+      "react/jsx-filename-extension": [
+        1,
+        {
+          "extensions": [
+            ".js",
+            ".jsx"
+          ]
+        }
+      ]
+    }
+  },
+  "devDependencies": {
+    "autoprefixer": "6.5.0",
+    "babel-core": "6.17.0",
+    "babel-eslint": "7.0.0",
+    "babel-loader": "6.2.5",
+    "babel-plugin-transform-runtime": "6.15.0",
+    "babel-preset-es2015": "6.16.0",
+    "babel-preset-react": "6.16.0",
+    "babel-preset-react-hmre": "1.1.1",
+    "colors": "^1.1.0",
+    "css-loader": "^0.23.1",
+    "csswring": "^4.2.2",
+    "eslint": "3.8.1",
+    "eslint-config-airbnb": "12.0.0",
+    "eslint-plugin-import": "2.0.1",
+    "eslint-plugin-jsx-a11y": "2.2.3",
+    "eslint-plugin-react": "6.4.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "file-loader": "0.9.0",
+    "gh-pages": "0.11.0",
+    "handlebars": "4.0.5",
+    "handlebars-loader": "1.4.0",
+    "html-loader": "0.4.4",
+    "html-webpack-plugin": "2.22.0",
+    "image-webpack-loader": "2.0.0",
+    "json-loader": "0.5.4",
+    "postcss-assets": "4.1.0",
+    "postcss-cssnext": "^2.5.2",
+    "postcss-flexboxfixer": "0.0.5",
+    "postcss-loader": "^0.8.2",
+    "postcss-nested": "^1.0.0",
+    "postcss-unprefix": "0.2.2",
+    "raw-loader": "0.5.1",
+    "style-loader": "^0.13.1",
+    "stylus-loader": "2.3.1",
+    "url-loader": "0.5.7",
+    "webpack": "^1.8.11",
+    "webpack-dev-server": "^1.8.2"
+  },
+  "dependencies": {
+    "auth0-lock": "10.4.0",
+    "bootstrap": "3.3.7",
+    "react": "15.3.2",
+    "react-dom": "15.3.2"
+  }
+}
