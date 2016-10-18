@@ -18,8 +18,9 @@ export default class Hero extends Component {
           <span className="logo">
             <img src={image} alt="eventloop logo" />
           </span>
-          <h3>By</h3>
+          <h1> Hackathón - 26-27 Noviembre </h1>
           <p>
+            <h4>By</h4>
             <a href="https://twitter.com/noders_cl">
               <img src={nodersLogo} alt="noders logo" />
             </a>
