@@ -59,7 +59,7 @@ export default class Hero extends Component {
                 <p>(Si, nos gusta JavaScript, pero no somos excluyentes, puedes codear otros lenguajes si así lo quieres :) )</p>
                 <ul className="actions">
                   <li>
-                    <a href="generic.html" className="button">Learn More</a>
+                    <a href="https://ti.to/eventloop16/eventloop-16" target="_blank" rel="noopener noreferrer" className="button">Learn More</a>
                   </li>
                 </ul>
               </div>
@@ -141,7 +141,7 @@ export default class Hero extends Component {
             <footer className="major">
               <ul className="actions">
                 <li>
-                  <a href="generic.html" className="button">Pide tu entrada aquí</a>
+                  <a href="https://ti.to/eventloop16/eventloop-16" target="_blank" rel="noopener noreferrer" className="button">Pide tu entrada aquí</a>
                 </li>
               </ul>
             </footer>
