@@ -55,6 +55,11 @@ module.exports = {
       }
     })
   ],
+  resolve: {
+    alias: {
+      jquery: 'jquery/src/jquery'
+    }
+  },
   module: {
     loaders: [
       {
@@ -62,10 +67,19 @@ module.exports = {
         loader: 'style-loader!css-loader!stylus-loader'
       }, {
         test: /\.css$/,
+        include: [
+          path.resolve(__dirname, 'src/components')
+        ],
         loader: ExtractTextPlugin.extract({
           notExtractLoader: 'style-loader',
           loader: 'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!resolve-url!postcss'
         })
+      }, {
+        test: /\.css$/,
+        include: [
+          path.resolve(__dirname, 'src/css')
+        ],
+        loader: ['style', 'css']
       }, {
         test: /\.(ttf|eot|svg|ttf|otf|woff(2)?)(\?[a-z0-9=&.]+)?$/,
         loader: 'file-loader'

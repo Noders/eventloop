@@ -7,3 +7,7 @@
   align-items: center;
   justify-content: center;
 }
+
+.image {
+  max-width: 21em;
+}
