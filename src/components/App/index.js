@@ -4,7 +4,7 @@ import Hero from '../Hero';
 export default class App extends Component {
   render () {
     return (
-      <div>
+      <div id="wrapper">
         <Hero />
       </div>
     );
