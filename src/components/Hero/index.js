@@ -33,13 +33,16 @@ export default class Hero extends Component {
               <a href="#intro" className="active">Introduction</a>
             </li>
             <li>
-              <a href="#first">First Section</a>
+              <a href="#first">Sponsors</a>
             </li>
             <li>
-              <a href="#second">Second Section</a>
+              <a href="#second">Premios</a>
             </li>
             <li>
-              <a href="#cta">Consigue tu entrada acá</a>
+              <a href="#cta">Consigue tu entrada</a>
+            </li>
+            <li>
+              <a href="#talk">Contácto</a>
             </li>
           </ul>
         </nav>
@@ -66,7 +69,7 @@ export default class Hero extends Component {
 
           <section id="first" className="main special">
             <header className="major">
-              <h2>Magna veroeros</h2>
+              <h2>Nuestros Sponsors</h2>
             </header>
             <ul className="features">
               <li>
@@ -96,44 +99,49 @@ export default class Hero extends Component {
 
           <section id="second" className="main special">
             <header className="major">
-              <h2>Ipsum consequat</h2>
+              <h2>¿Qué ofecemos?</h2>
               <p>
-                Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-                posuere. Nulla massa urna, fermentum eget quam aliquet.
+                Ofrecemos una experiencia genial! Creada por y para developers, para crear soluciones utilizando las últimas tecnologías<br />
+                Eres el dueño de todo lo que desarrolles. No catch!
+                <br />
+                Y lo mejor de todo? Gratis!
               </p>
             </header>
             <ul className="statistics">
               <li className="style1">
-                <span className="icon fa-code-fork" />
-                <strong>5,120</strong>
-                Etiam
+                <span className="icon fa-user" />
+                <strong>150+</strong>
+                Developers
               </li>
               <li className="style2">
-                <span className="icon fa-folder-open-o" />
-                <strong>8,192</strong>
-                Magna
+                <span className="icon fa-coffee" />
+                <strong>500+</strong>
+                Cafés (o té)
               </li>
               <li className="style3">
-                <span className="icon fa-signal" />
-                <strong>2,048</strong>
-                Tempus
+                <span className="icon fa-clock-o" />
+                <strong>1</strong>
+                Fin de semana
               </li>
               <li className="style4">
                 <span className="icon fa-laptop" />
-                <strong>4,096</strong>
-                Aliquam
+                <strong> 5 </strong>
+                Charlas y Workshops
               </li>
               <li className="style5">
-                <span className="icon fa-diamond" />
-                <strong>1,024</strong>
-                Nullam
+                <span className="icon fa-cutlery" />
+                <strong>Mucha</strong>
+                Comida, Snacks y Pizzas.
               </li>
             </ul>
-            <p className="content">Nam elementum nisl et mi a commodo porttitor. Morbi sit amet nisl eu arcu faucibus hendrerit vel a risus. Nam a orci mi, elementum ac arcu sit amet, fermentum pellentesque et purus. Integer maximus varius lorem, sed convallis diam accumsan sed. Etiam porttitor placerat sapien, sed eleifend a enim pulvinar faucibus semper quis ut arcu. Ut non nisl a mollis est efficitur vestibulum. Integer eget purus nec nulla mattis et accumsan ut magna libero. Morbi auctor iaculis porttitor. Sed ut magna ac risus et hendrerit scelerisque. Praesent eleifend lacus in lectus aliquam porta. Cras eu ornare dui curabitur lacinia.</p>
+            <p className="content">
+              Durante el evento se dicatarán workshops y se realizarán charlas interesantes, por lo que si quieres un respiro de codear, te tenemos cubierto.
+              Nos gustar participar y realizar eventos! Nos encanta estar organizando actividades, pero somos antes que nada Developers, Ingenieros, Diseñadores, Geeks. Hacemos la comunidad de las que nos gusta participar.
+            <br /> </p>
             <footer className="major">
               <ul className="actions">
                 <li>
-                  <a href="generic.html" className="button">Learn More</a>
+                  <a href="generic.html" className="button">Pide tu entrada aquí</a>
                 </li>
               </ul>
             </footer>
@@ -150,6 +158,22 @@ export default class Hero extends Component {
               <ul className="actions">
                 <li>
                   <a href="generic.html" className="button special">Inscríbete acá</a>
+                </li>
+              </ul>
+            </footer>
+          </section>
+
+          <section id="talk" className="main special">
+            <header className="major">
+              <h2>¿Tienes dudas?</h2>
+              <p>
+                Si tienes dudas o consultas, contáctate con nosotros!
+              </p>
+            </header>
+            <footer className="major">
+              <ul className="actions">
+                <li>
+                  <a href="//twitter.com/NodersCL" rel="noopener noreferrer" target="_blank" className="button"><span className="icon fa-twitter" />Twitter</a>
                 </li>
               </ul>
             </footer>
