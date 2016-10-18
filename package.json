@@ -93,6 +93,7 @@
     "postcss-nested": "^1.0.0",
     "postcss-unprefix": "0.2.2",
     "raw-loader": "0.5.1",
+    "react-svg-loader": "1.1.1",
     "resolve-url-loader": "1.6.0",
     "style-loader": "0.13.1",
     "stylus-loader": "2.3.1",

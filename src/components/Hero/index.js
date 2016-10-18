@@ -12,9 +12,7 @@ export default class Hero extends Component {
     const { counter } = this.state;
     return (
       <div className={css.hero}>
-        <img src={image} alt="logo" />
-        <div>Webpack is doing its thing with React and ES2015</div>
-        <div>{counter}</div>
+        <img src={image} alt="main_logo" />
       </div>
     );
   }
