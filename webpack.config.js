@@ -1,3 +1,8 @@
+/* eslint
+  no-var: 0,
+  import/no-extraneous-dependencies: 0
+*/
+
 var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
@@ -7,22 +12,22 @@ var cssnext = require('postcss-cssnext');
 var nested = require('postcss-nested');
 var postcssAssets = require('postcss-assets');
 
-var colors = require('colors');
+// var colors = require('colors');
 
-var postCSSConfig = function(webpack) {
+var postCSSConfig = () => {
   return [nested, cssnext(), postcssAssets()];
 };
-
 var babelQueryPresets = ['es2015', 'react'];
+
 if (process.env.NODE_ENV !== 'production') {
   babelQueryPresets.push('react-hmre');
 }
 
 module.exports = {
-  // devtool: 'cheap-eval-source-map',
+  devtool: 'cheap-eval-source-map',
   entry: './src/app.js',
   output: {
-    path: 'build',
+    path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
   },
   plugins: [
@@ -31,7 +36,24 @@ module.exports = {
       // filename: path.resolve(__dirname, 'src', 'build', 'index.html'),
       template: path.resolve(__dirname, 'src', 'template', 'index.hbs')
     }),
-    new ExtractTextPlugin('styles.css')
+    new ExtractTextPlugin({
+      filename: 'styles.css',
+      allChunks: true
+    }),
+    new webpack.LoaderOptionsPlugin({
+      minimize: process.env.NODE_ENV === 'production',
+      options: {
+        context: path.join(__dirname, 'src'),
+        output: {
+          path: path.join(__dirname, 'build')
+        },
+        babel: {
+          presets: ['es2015', 'stage-0'],
+          plugins: ['transform-runtime']
+        },
+        postcss: postCSSConfig
+      }
+    })
   ],
   module: {
     loaders: [
@@ -40,7 +62,10 @@ module.exports = {
         loader: 'style-loader!css-loader!stylus-loader'
       }, {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract('css!postcss')
+        loader: ExtractTextPlugin.extract({
+          notExtractLoader: 'style-loader',
+          loader: 'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!resolve-url!postcss'
+        })
       }, {
         test: /\.(ttf|eot|svg|ttf|otf|woff(2)?)(\?[a-z0-9=&.]+)?$/,
         loader: 'file-loader'
@@ -62,6 +87,5 @@ module.exports = {
         }
       }
     ]
-  },
-  postcss: postCSSConfig
+  }
 };
