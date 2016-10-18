@@ -5,11 +5,12 @@ import './css/main.css';
 // import 'bootstrap/dist/css/bootstrap-theme.css';
 
 import App from './components/App';
+import js from './js';
 
-const containerEl = document.getElementById('app');
-render(
-  <App />,
-  containerEl
-);
-
-System.import('./js');
+js.then(() => {
+  const containerEl = document.getElementById('app');
+  render(
+    <App />,
+    containerEl
+  );
+});

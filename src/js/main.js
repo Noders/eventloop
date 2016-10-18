@@ -1,7 +1,6 @@
 import skel from 'skel-framework';
 
-(function($) {
-
+(($) => {
   skel.breakpoints({
     xlarge: '(max-width: 1680px)',
     large: '(max-width: 1280px)',
@@ -11,8 +10,7 @@ import skel from 'skel-framework';
     xxsmall: '(max-width: 360px)'
   });
 
-  $(function() {
-
+  $(() => {
     var $window = $(window),
       $body = $('body'),
       $main = $('#main');
@@ -63,9 +61,10 @@ import skel from 'skel-framework';
         var $this = $(this);
 
         // External link? Bail.
-        if ($this.attr('href').charAt(0) != '#')
+        if ($this.attr('href').charAt(0) !== '#')
           return;
 
+        // Deactivate all links.
         // Deactivate all links.
         $nav_a.removeClass('active').removeClass('active-locked');
 
