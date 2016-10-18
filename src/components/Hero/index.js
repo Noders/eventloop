@@ -16,7 +16,7 @@ export default class Hero extends Component {
       <div>
         <header id="header" className="alt">
           <span className="logo">
-            <img src={image} alt="eventloop logo" />
+            <img src={image} alt="eventloop logo" className={css.image} />
           </span>
           <h1> Hackathón - 26-27 Noviembre </h1>
           <p>
@@ -39,7 +39,7 @@ export default class Hero extends Component {
               <a href="#second">Second Section</a>
             </li>
             <li>
-              <a href="#cta">Get Started</a>
+              <a href="#cta">Consigue tu entrada acá</a>
             </li>
           </ul>
         </nav>
@@ -50,9 +50,10 @@ export default class Hero extends Component {
             <div className="spotlight">
               <div className="content">
                 <header className="major">
-                  <h2>Ipsum sed adipiscing</h2>
+                  <h2>¿Eventloop?</h2>
                 </header>
-                <p>Sed lorem ipsum dolor sit amet nullam consequat feugiat consequat magna adipiscing magna etiam amet veroeros. Lorem ipsum dolor tempus sit cursus. Tempus nisl et nullam lorem ipsum dolor sit amet aliquam.</p>
+                <p>Exacto! Eventloop es una iniciativa internacional realizada <b>por y para developers!</b> Una hackatón centrada en solucionar problemas usando BigData y Data Visualization, Open Data, JS y NodeJS!</p>
+                <p>(Si, nos gusta JavaScript, pero no somos excluyentes, puedes codear otros lenguajes si así lo quieres :) )</p>
                 <ul className="actions">
                   <li>
                     <a href="generic.html" className="button">Learn More</a>
@@ -140,19 +141,15 @@ export default class Hero extends Component {
 
           <section id="cta" className="main special">
             <header className="major">
-              <h2>Congue imperdiet</h2>
+              <h2>Consigue tu entrada</h2>
               <p>
-                Donec imperdiet consequat consequat. Suspendisse feugiat congue<br />
-                posuere. Nulla massa urna, fermentum eget quam aliquet.
+                Eventloop la Hackathón internacional realizada por y para developers.
               </p>
             </header>
             <footer className="major">
               <ul className="actions">
                 <li>
-                  <a href="generic.html" className="button special">Get Started</a>
-                </li>
-                <li>
-                  <a href="generic.html" className="button">Learn More</a>
+                  <a href="generic.html" className="button special">Inscríbete acá</a>
                 </li>
               </ul>
             </footer>
