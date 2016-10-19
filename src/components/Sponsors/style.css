@@ -1,13 +1,20 @@
-.hero {
-  width: 100vw;
-  height: 50vh;
-  background-color: lightgrey;
+.body {
   display: flex;
-  flex-direction: column;
+  flex-wrap: wrap;
   align-items: center;
-  justify-content: center;
+  justify-content: space-around;
+}
+.images {
+  max-width: 16em;
+  padding: 1em;
 }
 
-.image {
-  max-width: 21em;
+@media (max-width: 600px) {
+  .images {
+    max-width: 9em;
+    padding: 0.7em;
+  }
+}
+.subTitle {
+  font-size: x-large !important;
 }

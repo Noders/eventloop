@@ -1,5 +1,12 @@
 import React, { Component } from 'react';
 
+import microsoft from '../../images/microsoft.png';
+import uss from '../../images/uss.png';
+import noders from '../../images/noders.png';
+import pageload from '../../images/pageload.png';
+
+import style from './style.css';
+
 export default class Sponsors extends Component {
   constructor (props) {
     super(props);
@@ -12,27 +19,25 @@ export default class Sponsors extends Component {
         <header className="major">
           <h2>Nuestros Sponsors</h2>
         </header>
-        <ul className="features">
-          <li>
-            <span className="icon major style1 fa-code" />
-            <h3>Ipsum consequat</h3>
-            <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-          </li>
-          <li>
-            <span className="icon major style3 fa-copy" />
-            <h3>Amed sed feugiat</h3>
-            <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-          </li>
-          <li>
-            <span className="icon major style5 fa-diamond" />
-            <h3>Dolor nullam</h3>
-            <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-          </li>
-        </ul>
+        <div className={style.body}>
+          <img src={microsoft} alt="microsoft" className={style.images} />
+          <img src={uss} alt="universidad san sebastian" className={style.images} />
+          <img src={pageload} alt="pageload" className={style.images} />
+        </div>
+        <br />
+        <header className="major">
+          <h2 className={style.subTitle}>Community Partners</h2>
+        </header>
+        <div className={style.body}>
+          <img src={noders} alt="noders" className={style.images} />
+        </div>
         <footer className="major">
+          <p>
+            ¿Nos falta alguien? ¿Quieres apoyarnos? ¿Te gustaría estar entre nuestros sponsors?
+          </p>
           <ul className="actions">
             <li>
-              <a href="generic.html" className="button">Learn More</a>
+              <a href="mailto:mail@mail.mail" className="button">Envíanos un mensaje</a>
             </li>
           </ul>
         </footer>
@@ -40,3 +45,36 @@ export default class Sponsors extends Component {
     );
   }
 }
+
+
+/*
+<section id="first" className="main special">
+  <header className="major">
+    <h2>Nuestros Sponsors</h2>
+  </header>
+  <ul className="features">
+    <li>
+      <span className="icon major style1 fa-code" />
+      <h3>Ipsum consequat</h3>
+      <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+    </li>
+    <li>
+      <span className="icon major style3 fa-copy" />
+      <h3>Amed sed feugiat</h3>
+      <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+    </li>
+    <li>
+      <span className="icon major style5 fa-diamond" />
+      <h3>Dolor nullam</h3>
+      <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
+    </li>
+  </ul>
+  <footer className="major">
+    <ul className="actions">
+      <li>
+        <a href="generic.html" className="button">Learn More</a>
+      </li>
+    </ul>
+  </footer>
+</section>
+*/
