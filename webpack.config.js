@@ -18,13 +18,14 @@ var postCSSConfig = () => {
   return [nested, cssnext(), postcssAssets()];
 };
 var babelQueryPresets = ['es2015', 'react'];
-
+var devtool = 'cheap-eval-source-map'
 if (process.env.NODE_ENV !== 'production') {
   babelQueryPresets.push('react-hmre');
+  devtool = 'cheap-source-map';
 }
 
 module.exports = {
-  devtool: 'cheap-eval-source-map',
+  devtool: devtool,
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'build'),
