@@ -1,0 +1,13 @@
+.hero {
+  width: 100vw;
+  height: 50vh;
+  background-color: lightgrey;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.image {
+  max-width: 21em;
+}
