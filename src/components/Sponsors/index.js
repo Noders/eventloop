@@ -26,7 +26,7 @@ export default class Sponsors extends Component {
           <img src={pageload} alt="pageload" className={style.images} />
         </div>
         <br />
-        <header className="major">
+        <header className={['major', style.subTitle].join(' ')}>
           <h2 className={style.subTitle}>Community Partners</h2>
         </header>
         <div className={style.body}>

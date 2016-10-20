@@ -33,6 +33,11 @@
   transform: scale(1.1);
 }
 
+.subTitle {
+  margin-top: 2em;
+  margin-bottom: 1em !important;
+}
+
 
 @media (max-width: 600px) {
   .images {
