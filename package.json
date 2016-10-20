@@ -4,8 +4,8 @@
   "description": "website for eventloop hackathon in Chile",
   "scripts": {
     "start": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --port 3010",
-    "build": "rimraf build && cross-env NODE_ENV=production webpack --progress --colors",
-    "deploy": "npm run build && gh-pages --dotfiles --dist build --branch gh-pages",
+    "build": "rimraf build && cross-env NODE_ENV=production webpack --progress --colors && ./node_modules/.bin/copy CNAME build/",
+    "deploy": "npm run build && copy CNAME && gh-pages --dotfiles --dist build --branch gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "fforres",
