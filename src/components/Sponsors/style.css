@@ -38,7 +38,9 @@
   margin-bottom: 1em !important;
 }
 
-
+.imageLinks {
+  border-bottom: none;
+}
 @media (max-width: 600px) {
   .images {
     max-width: 9em;
