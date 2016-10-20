@@ -31,7 +31,7 @@ export default class Questions extends Component {
               </a>
             </li>
             <li>
-              <a href="mailto:mail@mail.mail" rel="noopener noreferrer" target="_blank" className="button">
+              <a href="mailto:eventloop@noders.com" rel="noopener noreferrer" target="_blank" className="button">
                 <span className="icon fa-envelope" />
                 <span className={style.iconTextMargin}>Email</span>
               </a>

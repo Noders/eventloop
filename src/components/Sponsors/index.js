@@ -39,7 +39,7 @@ export default class Sponsors extends Component {
           </p>
           <ul className="actions">
             <li>
-              <a href="mailto:mail@mail.mail" className="button">Envíanos un mensaje</a>
+              <a href="mailto:eventloop@noders.com" className="button">Envíanos un mensaje</a>
             </li>
           </ul>
         </footer>

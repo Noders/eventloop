@@ -12,56 +12,50 @@ export default class Footer extends Component {
     return (
       <footer id="footer">
         <section>
-          <h2>Aliquam sed mauris</h2>
-          <p>Sed lorem ipsum dolor sit amet et nullam consequat feugiat consequat magna adipiscing tempus etiam dolore veroeros. eget dapibus mauris. Cras aliquet, nisl ut viverra sollicitudin, ligula erat egestas velit, vitae tincidunt odio.</p>
-          <ul className="actions">
-            <li>
-              <a href="generic.html" className="button">Learn More</a>
-            </li>
-          </ul>
+          <h2>Disclaimer</h2>
+          <p>
+            Eventloop es un evento non-profit, sin fines de lucro, realizado por <a href="http://www.noders.com">Noders</a> la comunidad de JS y NodeJS.
+            <br />
+            <b>Noders</b> es llevado por voluntarios, desarrolladores, entusiastas que disfrutan generando instancias para la comunidad de desarrollo en Chile.
+            <br />
+            Nos basamos en el siguiente <a href="https://github.com/Noders/code_of_conduct">Código de Conducta</a>.
+          </p>
         </section>
         <section>
-          <h2>Etiam feugiat</h2>
+          <h2>Contactos</h2>
           <dl className="alt">
-            <dt>Address</dt>
-            <dd>1234 Somewhere Road &bull; Nashville, TN 00000 &bull; USA</dd>
-            <dt>Phone</dt>
-            <dd>(000) 000-0000 x 0000</dd>
+            <dt>Dirección</dt>
+            <dd>
+              <a href="https://www.google.cl/maps/place/Bellavista+7,+Providencia,+Regi%C3%B3n+Metropolitana/@-33.4347841,-70.6377205,17z/data=!3m1!4b1!4m5!3m4!1s0x9662c59add13d3c9:0x8b6caac0d51ac375!8m2!3d-33.4347886!4d-70.6355265">Bellavista 7, Providencia</a>
+            </dd>
+            <dt>Fecha</dt>
+            <dd>26 y 27 de Noviembre</dd>
             <dt>Email</dt>
             <dd>
-              <a href="#s">information@untitled.tld</a>
+              <a href="mailto:eventloop@noders.com">eventloop@noders.com</a>
             </dd>
           </dl>
           <ul className="icons">
             <li>
-              <a href="#s" className="icon fa-twitter alt">
+              <a href="https://twitter.com/noderscl" className="icon fa-twitter alt">
                 <span className="label">Twitter</span>
               </a>
             </li>
             <li>
-              <a href="#s" className="icon fa-facebook alt">
+              <a href="https://facebook.com/noderscl" className="icon fa-facebook alt">
                 <span className="label">Facebook</span>
               </a>
             </li>
             <li>
-              <a href="#s" className="icon fa-instagram alt">
-                <span className="label">Instagram</span>
-              </a>
-            </li>
-            <li>
-              <a href="#s" className="icon fa-github alt">
+              <a href="https://github.com/noders" className="icon fa-github alt">
                 <span className="label">GitHub</span>
-              </a>
-            </li>
-            <li>
-              <a href="#s" className="icon fa-dribbble alt">
-                <span className="label">Dribbble</span>
               </a>
             </li>
           </ul>
         </section>
-        <p className="copyright">&copy; Untitled. Design:
-          <a href="https://html5up.net">HTML5 UP</a>.</p>
+        <p className="copyright">&copy; Noders <br />
+          Design: <a href="https://html5up.net">HTML5 UP</a> and <a href="https://twitter.com/fforres">@fforres</a>.
+        </p>
       </footer>
     );
   }
