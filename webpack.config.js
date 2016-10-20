@@ -1,6 +1,7 @@
-/* eslint
-  no-var: 0,
-  import/no-extraneous-dependencies: 0
+/*
+  eslint
+    no-var: 0,
+    import/no-extraneous-dependencies: 0
 */
 
 var path = require('path');

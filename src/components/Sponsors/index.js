@@ -2,9 +2,12 @@ import React, { Component } from 'react';
 
 import microsoft from '../../images/microsoft.png';
 import uss from '../../images/uss.png';
-import noders from '../../images/noders.png';
 import pageload from '../../images/pageload.png';
+
+// Partners
+import noders from '../../images/noders.png';
 import proin from '../../images/proin.png';
+import ivdevs from '../../images/ivdevs.png';
 
 import style from './style.css';
 
@@ -31,7 +34,8 @@ export default class Sponsors extends Component {
         </header>
         <div className={style.body}>
           <img src={noders} alt="noders" className={style.imagesSponsors} />
-          <img src={proin} alt="noders" className={style.imagesSponsors} />
+          <img src={proin} alt="proin" className={style.imagesSponsors} />
+          <img src={ivdevs} alt="iv devs" className={style.imagesSponsors} />
         </div>
         <footer className="major">
           <p>
