@@ -4,6 +4,7 @@ import microsoft from '../../images/microsoft.png';
 import uss from '../../images/uss.png';
 import noders from '../../images/noders.png';
 import pageload from '../../images/pageload.png';
+import proin from '../../images/proin.png';
 
 import style from './style.css';
 
@@ -29,7 +30,8 @@ export default class Sponsors extends Component {
           <h2 className={style.subTitle}>Community Partners</h2>
         </header>
         <div className={style.body}>
-          <img src={noders} alt="noders" className={style.images} />
+          <img src={noders} alt="noders" className={style.imagesSponsors} />
+          <img src={proin} alt="noders" className={style.imagesSponsors} />
         </div>
         <footer className="major">
           <p>

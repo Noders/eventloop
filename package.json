@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "description": "website for eventloop hackathon in Chile",
   "scripts": {
-    "start": "cross-env NODE_ENV=development webpack-dev-server --progress --inline --hot --port 3010",
+    "start": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --port 3010",
     "build": "rimraf build && cross-env NODE_ENV=production webpack --progress --colors",
     "deploy": "npm run build && gh-pages --dotfiles --dist build --branch gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"

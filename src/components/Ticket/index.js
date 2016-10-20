@@ -12,8 +12,9 @@ export default class Ticket extends Component {
         <header className="major">
           <h2>Consigue tu entrada</h2>
           <p>
-            Eventloop la Hackathón internacional realizada por y para developers.
+            ¿Aún no reservas tu entrada? ¿Qué estás esperando!?
           </p>
+
         </header>
         <footer className="major">
           <ul className="actions">
@@ -21,6 +22,13 @@ export default class Ticket extends Component {
               <a href="generic.html" className="button special">Inscríbete acá</a>
             </li>
           </ul>
+          <p>
+            <i>
+              <b>Eventloop</b>, nombre y logo son propiedad de la comunidad de Javascript de Ciudad de México.
+              <br />
+              Esta versión de EventLoop está siendo realizado por <a href="http://noders.com">Noders</a>, la comunidad de JavaScript en Chile.
+            </i>
+          </p>
         </footer>
       </section>
     );

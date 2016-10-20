@@ -1,3 +1,13 @@
+
+@keyframes grow {
+  from {
+    transform: scale(1);
+  }
+  to {
+    transform: scale(1.1);
+  }
+}
+
 .body {
   display: flex;
   flex-wrap: wrap;
@@ -9,9 +19,23 @@
   padding: 1em;
 }
 
+.imagesSponsors {
+  max-width: 10em;
+  padding: 1em;
+  transform: scale(1);
+}
+.imagesSponsors:hover {
+  transform: scale(1.1);
+}
+
+
 @media (max-width: 600px) {
   .images {
     max-width: 9em;
+    padding: 0.7em;
+  }
+  .imagesSponsors {
+    max-width: 7em;
     padding: 0.7em;
   }
 }

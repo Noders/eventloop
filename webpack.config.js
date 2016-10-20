@@ -18,14 +18,22 @@ var postCSSConfig = () => {
   return [nested, cssnext(), postcssAssets()];
 };
 var babelQueryPresets = ['es2015', 'react'];
-var devtool = 'cheap-eval-source-map'
+var devtool = 'cheap-eval-source-map';
+var cssLoader = ExtractTextPlugin.extract({
+  notExtractLoader: 'style-loader',
+  loader: 'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!resolve-url!postcss'
+});
 if (process.env.NODE_ENV !== 'production') {
   babelQueryPresets.push('react-hmre');
   devtool = 'cheap-source-map';
+  cssLoader = [
+    'style?sourceMap',
+    'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]'
+  ];
 }
 
 module.exports = {
-  devtool: devtool,
+  devtool,
   entry: './src/app.js',
   output: {
     path: path.resolve(__dirname, 'build'),
@@ -64,17 +72,11 @@ module.exports = {
   module: {
     loaders: [
       {
-        test: /\.styl$/,
-        loader: 'style-loader!css-loader!stylus-loader'
-      }, {
         test: /\.css$/,
         include: [
           path.resolve(__dirname, 'src/components')
         ],
-        loader: ExtractTextPlugin.extract({
-          notExtractLoader: 'style-loader',
-          loader: 'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!resolve-url!postcss'
-        })
+        loader: cssLoader
       }, {
         test: /\.css$/,
         include: [

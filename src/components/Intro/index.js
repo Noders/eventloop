@@ -19,7 +19,7 @@ export default class Intro extends Component {
             <header className="major">
               <h2>¿Eventloop?</h2>
             </header>
-            <p>Exacto! Eventloop es una iniciativa internacional realizada <b>por y para developers!</b> Una hackatón centrada en solucionar problemas usando BigData y Data Visualization, Open Data, JS y NodeJS!</p>
+            <p>Exacto! Eventloop es una iniciativa internacional, non-profit, realizada <b>por y para developers!</b> Una hackatón centrada en solucionar problemas usando BigData y Data Visualization, Open Data, JS y NodeJS!</p>
             <p>(Si, nos gusta JavaScript, pero no somos excluyentes, puedes codear otros lenguajes si así lo quieres :) )</p>
             <ul className="actions">
               <li>
