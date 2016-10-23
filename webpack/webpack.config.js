@@ -31,6 +31,14 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       hash: true,
+      minify: {
+        collapseWhitespace: true,
+        removeComments: true,
+        removeRedundantAttributes: true,
+        removeScriptTypeAttributes: true,
+        removeStyleLinkTypeAttributes: true,
+        minifyCSS: true
+      },
       template: path.resolve(__dirname, '..', 'src', 'template', 'index.hbs')
     }),
     new ExtractTextPlugin({
@@ -73,13 +81,13 @@ module.exports = {
       icons: {
         android: true,
         appleIcon: true,
-        appleStartup: true,
-        coast: true,
+        appleStartup: false,
+        coast: false,
         favicons: true,
         firefox: true,
         opengraph: true,
         twitter: true,
-        yandex: true,
+        yandex: false,
         windows: false
       }
     }),
