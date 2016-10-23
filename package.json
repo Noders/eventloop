@@ -5,7 +5,7 @@
   "scripts": {
     "start": "./node_modules/.bin/cross-env NODE_ENV=development node webpack",
     "build": "rimraf build && cross-env NODE_ENV=production webpack --config ./webpack/webpack.config.js --progress --colors",
-    "dll": "webpack --config=./webpack/webpack.dll.js --progress --colors",
+    "build:dll": "webpack --config=./webpack/webpack.dll.js --progress --colors",
     "deploy": "npm run build  && ./node_modules/.bin/copy ./CNAME ./build/ && gh-pages --dotfiles --dist ./build --branch gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
