@@ -29,7 +29,8 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       hash: true,
-      // filename: path.resolve(__dirname, '..', 'src', 'build', 'index.html'),
+      minify: true,
+      xhtml: true,
       template: path.resolve(__dirname, '..', 'src', 'template', 'index.hbs')
     }),
     new ExtractTextPlugin({

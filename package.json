@@ -3,8 +3,8 @@
   "version": "0.0.1",
   "description": "website for eventloop hackathon in Chile",
   "scripts": {
-    "dev": "cross-env NODE_ENV=development webpack-dev-server --inline --hot --port 3010 && ngrok http 3011",
-    "start": "cross-env NODE_ENV=development node webpack",
+    "dev": "./node_modules/.bin/cross-env NODE_ENV=development webpack-dev-server --inline --hot --port 3010 && ngrok http 3011",
+    "start": "./node_modules/.bin/cross-env NODE_ENV=development node webpack",
     "build": "rimraf build && cross-env NODE_ENV=production webpack --config ./webpack/webpack.config.js --progress --colors",
     "deploy": "npm run build  && ./node_modules/.bin/copy ./CNAME ./build/ && gh-pages --dotfiles --dist ./build --branch gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -71,6 +71,7 @@
     "babel-preset-react": "6.16.0",
     "babel-preset-react-hmre": "1.1.1",
     "colors": "^1.1.0",
+    "cross-env": "^3.1.3",
     "css-loader": "0.23.1",
     "csswring": "^4.2.2",
     "eslint": "3.8.1",
@@ -108,7 +109,6 @@
     "babel-register": "^6.16.3",
     "bootstrap": "3.3.7",
     "copy": "^0.3.0",
-    "cross-env": "^3.1.3",
     "express": "^4.14.0",
     "jquery": "3.1.1",
     "ngrok": "^2.2.3",

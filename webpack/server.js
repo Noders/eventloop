@@ -3,6 +3,7 @@ import webpack from 'webpack';
 import path from 'path';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
+import ngrok from 'ngrok';
 
 import webpackDevConfig from './webpack.config';
 import webpackProdConfig from './webpack.dev.config';
@@ -48,3 +49,9 @@ app.listen(port, '0.0.0.0', function onStart(err) {
   }
   console.info('==> 🌎 Listening on port %s. Open up http://0.0.0.0:%s/ in your browser.', port, port);
 });
+
+if (isDeveloping) {
+  ngrok.connect(port, (err, url) => {
+    console.log('Ngrok Ready: ', url);
+  });
+}
