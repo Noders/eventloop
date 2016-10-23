@@ -6,7 +6,7 @@
     "start": "./node_modules/.bin/cross-env NODE_ENV=development node webpack",
     "build": "rimraf build && cross-env NODE_ENV=production webpack --config ./webpack/webpack.config.js --progress --colors",
     "build:dll": "webpack --config=./webpack/webpack.dll.js --progress --colors",
-    "deploy": "npm run build  && ./node_modules/.bin/copy ./CNAME ./build/ && gh-pages --dotfiles --dist ./build --branch gh-pages",
+    "deploy": "npm run build  && ./node_modules/.bin/copyfiles CNAME build/ && ./node_modules/.bin/gh-pages --dotfiles --dist ./build --branch gh-pages",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "fforres",
@@ -72,7 +72,7 @@
     "babel-preset-react-hmre": "1.1.1",
     "cheerio": "^0.22.0",
     "colors": "^1.1.0",
-    "copy": "^0.3.0",
+    "copyfiles": "^1.0.0",
     "cross-env": "^3.1.3",
     "css-loader": "0.23.1",
     "csswring": "^4.2.2",

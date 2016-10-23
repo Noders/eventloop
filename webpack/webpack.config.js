@@ -150,12 +150,6 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
-      }, {
-        test: /\.(handlebars|hbs)$/,
-        loader: 'handlebars-loader',
-        query: {
-          partialDirs: [path.join(__dirname, '..', 'src', 'template')]
-        }
       }
     ]
   }
