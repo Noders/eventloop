@@ -50,7 +50,7 @@ var plugins = [
   }),
   new FaviconsWebpackPlugin({
     // Your source logo
-    logo: './src/images/eventloop.png',
+    logo: './src/images/eventloop.svg',
     // The prefix for all image files (might be a folder or a name)
     prefix: 'icons-[hash]/',
     // Emit all stats of the generated icons
