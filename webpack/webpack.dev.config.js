@@ -94,7 +94,7 @@ module.exports = {
       }
     }),
     new webpack.DllReferencePlugin({
-      context: path.join(__dirname, 'build'),
+      context: path.resolve(__dirname, 'build'),
       manifest
     })
   ],
