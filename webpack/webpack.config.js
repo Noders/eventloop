@@ -8,6 +8,7 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
+var ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 var cssnext = require('postcss-cssnext');
 var nested = require('postcss-nested');
 var postcssAssets = require('postcss-assets');
@@ -42,6 +43,9 @@ module.exports = {
       },
       inject: true,
       template: path.resolve(__dirname, '..', 'src', 'template', 'index.html')
+    }),
+    new ScriptExtHtmlWebpackPlugin({
+      defaultAttribute: 'defer'
     }),
     new ExtractTextPlugin({
       filename: 'styles.css',
