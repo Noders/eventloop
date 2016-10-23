@@ -19,11 +19,36 @@ var postCSSConfig = () => {
   return [nested, cssnext(), postcssAssets()];
 };
 var babelQueryPresets = ['es2015', 'react'];
-var devtool = 'cheap-eval-source-map';
+var devtool = 'source-map';
 var cssLoader = ExtractTextPlugin.extract({
   notExtractLoader: 'style-loader',
   loader: 'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]!resolve-url!postcss'
 });
+var plugins = [
+  new HtmlWebpackPlugin({
+    hash: true,
+    // filename: path.resolve(__dirname, 'src', 'build', 'index.html'),
+    template: path.resolve(__dirname, 'src', 'template', 'index.hbs')
+  }),
+  new ExtractTextPlugin({
+    filename: 'styles.css',
+    allChunks: true
+  }),
+  new webpack.LoaderOptionsPlugin({
+    minimize: process.env.NODE_ENV === 'production',
+    options: {
+      context: path.join(__dirname, 'src'),
+      output: {
+        path: path.join(__dirname, 'build')
+      },
+      babel: {
+        presets: ['es2015', 'stage-0'],
+        plugins: ['transform-runtime']
+      },
+      postcss: postCSSConfig
+    }
+  })
+];
 if (process.env.NODE_ENV !== 'production') {
   babelQueryPresets.push('react-hmre');
   devtool = 'cheap-source-map';
@@ -31,6 +56,27 @@ if (process.env.NODE_ENV !== 'production') {
     'style?sourceMap',
     'css?modules&importLoaders=1&localIdentName=[path]___[name]__[local]___[hash:base64:5]'
   ];
+}
+if (process.env.NODE_ENV === 'production') {
+  console.log('PRODUCTION');
+  plugins.concat([
+    new webpack.optimize.DedupePlugin(),
+    new webpack.optimize.LimitChunkCountPlugin(),
+    new webpack.optimize.OccurrenceOrderPlugin(true),
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+        except: ['$super', '$', 'exports', 'require']
+      }
+    }),
+    new webpack.optimize.CommonsChunkPlugin('commons.chunk.js'),
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: JSON.stringify('production')
+      }
+    })
+
+  ]);
 }
 
 module.exports = {
@@ -40,31 +86,7 @@ module.exports = {
     path: path.resolve(__dirname, 'build'),
     filename: 'bundle.js'
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      hash: true,
-      // filename: path.resolve(__dirname, 'src', 'build', 'index.html'),
-      template: path.resolve(__dirname, 'src', 'template', 'index.hbs')
-    }),
-    new ExtractTextPlugin({
-      filename: 'styles.css',
-      allChunks: true
-    }),
-    new webpack.LoaderOptionsPlugin({
-      minimize: process.env.NODE_ENV === 'production',
-      options: {
-        context: path.join(__dirname, 'src'),
-        output: {
-          path: path.join(__dirname, 'build')
-        },
-        babel: {
-          presets: ['es2015', 'stage-0'],
-          plugins: ['transform-runtime']
-        },
-        postcss: postCSSConfig
-      }
-    })
-  ],
+  plugins,
   resolve: {
     alias: {
       jquery: 'jquery/src/jquery'
