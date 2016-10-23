@@ -5,19 +5,92 @@
 */
 var FaviconsWebpackPlugin = require('favicons-webpack-plugin');
 var path = require('path');
+var fs = require('fs');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-
+var cheerio = require('cheerio');
 var cssnext = require('postcss-cssnext');
 var nested = require('postcss-nested');
 var postcssAssets = require('postcss-assets');
 
-var manifest = require('./dll/vendor-manifest.json');
+var dllPlugin = require('./vendors.js').dllPlugin;
 
-var postCSSConfig = () => {
+var dllConfig = dllPlugin.defaults;
+
+function postCSSConfig () {
   return [nested, cssnext(), postcssAssets()];
-};
+}
+
+function templateContent () {
+  const html = fs.readFileSync(
+    path.resolve(__dirname, '..', 'src', 'template', 'index.html')
+  ).toString();
+
+  const doc = cheerio(html);
+  const body = doc.find('body');
+
+  const manifestPath = path.resolve(process.cwd(), dllConfig.path, 'eventloop-manifest.json');
+
+  if (!fs.existsSync(manifestPath)) {
+    console.error('The DLL manifest is missing. Please run `npm run build:dll`');
+    process.exit(0);
+    return null;
+  }
+  body.append('<script data-dll="true" src="/main.dll.js"></script>');
+  return doc.toString();
+}
+
+function dllHandler () {
+  const manifestPath = path.resolve(process.cwd(), dllConfig.path, 'eventloop-manifest.json');
+
+  if (!fs.existsSync(manifestPath)) {
+    console.error('The DLL manifest is missing. Please run `npm run build:dll`');
+    process.exit(0);
+  }
+
+  return [
+    new webpack.DllReferencePlugin({
+      context: process.cwd(),
+      manifest: require(manifestPath) // eslint-disable-line global-require
+    })
+  ];
+}
+
+const plugins = [
+  new HtmlWebpackPlugin({
+    inject: true,
+    hash: true,
+    templateContent: templateContent()
+  }),
+  new ExtractTextPlugin({
+    filename: 'styles.css',
+    allChunks: true
+  }),
+  new webpack.LoaderOptionsPlugin({
+    minimize: false,
+    options: {
+      context: path.join(__dirname, '..', 'src'),
+      output: {
+        path: path.join(__dirname, '..', 'build')
+      },
+      babel: {
+        presets: [
+          'es2015', 'stage-0'
+        ],
+        plugins: ['transform-runtime']
+      },
+      postcss: postCSSConfig
+    }
+  }),
+  new webpack.HotModuleReplacementPlugin(),
+  new webpack.DefinePlugin({
+    'process.env': {
+      NODE_ENV: JSON.stringify('development'),
+      BABEL_ENV: JSON.stringify('development')
+    }
+  })
+];
 
 module.exports = {
   cache: true,
@@ -31,73 +104,7 @@ module.exports = {
     publicPath: '/',
     filename: 'bundle_[name]_[hash].js'
   },
-  plugins: [
-    new HtmlWebpackPlugin({
-      hash: true,
-      template: path.resolve(__dirname, '..', 'src', 'template', 'index.hbs')
-    }),
-    new ExtractTextPlugin({
-      filename: 'styles.css',
-      allChunks: true
-    }),
-    new webpack.LoaderOptionsPlugin({
-      minimize: false,
-      options: {
-        context: path.join(__dirname, '..', 'src'),
-        output: {
-          path: path.join(__dirname, '..', 'build')
-        },
-        babel: {
-          presets: [
-            'es2015', 'stage-0'
-          ],
-          plugins: ['transform-runtime']
-        },
-        postcss: postCSSConfig
-      }
-    }),
-    new FaviconsWebpackPlugin({
-      // Your source logo
-      logo: './src/images/eventloop.svg',
-      // The prefix for all image files (might be a folder or a name)
-      prefix: 'icons-[hash]/',
-      // Emit all stats of the generated icons
-      emitStats: false,
-      // The name of the json containing all favicon information
-      statsFilename: 'iconstats-[hash].json',
-      // Generate a cache file with control hashes and
-      // don't rebuild the favicons until those hashes change
-      persistentCache: true,
-      // Inject the html into the html-webpack-plugin
-      inject: true,
-      // favicon background color (see https://github.com/haydenbleasel/favicons#usage)
-      background: '#fff',
-      // which icons should be generated (see https://github.com/haydenbleasel/favicons#usage)
-      icons: {
-        android: true,
-        appleIcon: true,
-        appleStartup: true,
-        coast: true,
-        favicons: true,
-        firefox: true,
-        opengraph: true,
-        twitter: true,
-        yandex: true,
-        windows: false
-      }
-    }),
-    new webpack.HotModuleReplacementPlugin(),
-    new webpack.DefinePlugin({
-      'process.env': {
-        NODE_ENV: JSON.stringify('development'),
-        BABEL_ENV: JSON.stringify('development')
-      }
-    }),
-    new webpack.DllReferencePlugin({
-      context: path.resolve(__dirname, 'build'),
-      manifest
-    })
-  ],
+  plugins: dllHandler().concat(plugins),
   resolve: {
     alias: {
       jquery: 'jquery/src/jquery'

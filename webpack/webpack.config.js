@@ -8,17 +8,14 @@ var path = require('path');
 var webpack = require('webpack');
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-
 var cssnext = require('postcss-cssnext');
 var nested = require('postcss-nested');
 var postcssAssets = require('postcss-assets');
 
-var manifest = require('./dll/vendor-manifest.json');
 
-// var colors = require('colors');
-var postCSSConfig = () => {
+function postCSSConfig () {
   return [nested, cssnext(), postcssAssets()];
-};
+}
 
 module.exports = {
   devtool: 'source-map',
@@ -32,14 +29,19 @@ module.exports = {
     new HtmlWebpackPlugin({
       hash: true,
       minify: {
-        collapseWhitespace: true,
         removeComments: true,
+        collapseWhitespace: true,
         removeRedundantAttributes: true,
-        removeScriptTypeAttributes: true,
+        useShortDoctype: true,
+        removeEmptyAttributes: true,
         removeStyleLinkTypeAttributes: true,
-        minifyCSS: true
+        keepClosingSlash: true,
+        minifyJS: true,
+        minifyCSS: true,
+        minifyURLs: true
       },
-      template: path.resolve(__dirname, '..', 'src', 'template', 'index.hbs')
+      inject: true,
+      template: path.resolve(__dirname, '..', 'src', 'template', 'index.html')
     }),
     new ExtractTextPlugin({
       filename: 'styles.css',
@@ -91,9 +93,14 @@ module.exports = {
         windows: false
       }
     }),
-    new webpack.optimize.DedupePlugin(),
-    new webpack.optimize.LimitChunkCountPlugin(),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor',
+      children: true,
+      minChunks: 2,
+      async: true,
+    }),
     new webpack.optimize.OccurrenceOrderPlugin(true),
+    new webpack.optimize.DedupePlugin(),
     new webpack.optimize.UglifyJsPlugin({
       compress: {
         warnings: false
@@ -107,10 +114,6 @@ module.exports = {
         NODE_ENV: JSON.stringify('production'),
         BABEL_ENV: JSON.stringify('production')
       }
-    }),
-    new webpack.DllReferencePlugin({
-      context: path.join(__dirname, 'build'),
-      manifest
     })
   ],
   resolve: {
