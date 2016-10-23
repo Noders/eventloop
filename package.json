@@ -114,6 +114,7 @@
     "ngrok": "^2.2.3",
     "react": "15.3.2",
     "react-dom": "15.3.2",
+    "react-helmet": "^3.1.0",
     "skel-framework": "git+https://github.com/ajlkn/skel.git"
   }
 }

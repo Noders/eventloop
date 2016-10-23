@@ -29,8 +29,6 @@ module.exports = {
   plugins: [
     new HtmlWebpackPlugin({
       hash: true,
-      minify: true,
-      xhtml: true,
       template: path.resolve(__dirname, '..', 'src', 'template', 'index.hbs')
     }),
     new ExtractTextPlugin({
