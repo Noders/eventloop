@@ -13,6 +13,8 @@ var cssnext = require('postcss-cssnext');
 var nested = require('postcss-nested');
 var postcssAssets = require('postcss-assets');
 
+var manifest = require('./dll/vendor-manifest.json');
+
 // var colors = require('colors');
 var postCSSConfig = () => {
   return [nested, cssnext(), postcssAssets()];
@@ -32,10 +34,11 @@ module.exports = {
       template: path.resolve(__dirname, '..', 'src', 'template', 'index.hbs')
     }),
     new ExtractTextPlugin({
-      filename: 'styles.css', allChunks: true
+      filename: 'styles.css',
+      allChunks: true
     }),
     new webpack.LoaderOptionsPlugin({
-      minimize: process.env.NODE_ENV === 'production',
+      minimize: true,
       options: {
         context: path.join(__dirname, '..', 'src'),
         output: {
@@ -94,8 +97,13 @@ module.exports = {
     new webpack.optimize.CommonsChunkPlugin('commons.chunk.js'),
     new webpack.DefinePlugin({
       'process.env': {
-        NODE_ENV: JSON.stringify('production')
+        NODE_ENV: JSON.stringify('production'),
+        BABEL_ENV: JSON.stringify('production')
       }
+    }),
+    new webpack.DllReferencePlugin({
+      context: path.join(__dirname, 'build'),
+      manifest
     })
   ],
   resolve: {

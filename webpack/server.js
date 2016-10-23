@@ -1,14 +1,18 @@
 import express from 'express';
 import webpack from 'webpack';
 import path from 'path';
+import { inspect } from 'util';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import webpackHotMiddleware from 'webpack-hot-middleware';
 import ngrok from 'ngrok';
 
-import webpackDevConfig from './webpack.config';
-import webpackProdConfig from './webpack.dev.config';
+import webpackDevConfig from './webpack.dev.config';
+import webpackProdConfig from './webpack.config';
+
 
 const isDeveloping = process.env.NODE_ENV !== 'production';
+
+console.log('MODO: ', process.env.NODE_ENV);
 const webpackConfig = isDeveloping ? webpackDevConfig : webpackProdConfig;
 
 const port = isDeveloping ? 3010 : process.env.PORT || 3010;
@@ -21,29 +25,25 @@ if (isDeveloping) {
     contentBase: 'src',
     stats: {
       colors: true,
-      hash: false,
+      hash: true,
       timings: true,
-      chunks: false,
-      chunkModules: false,
-      modules: false
+      chunks: true,
+      chunkModules: true,
+      modules: true
     }
   });
 
   app.use(middleware);
   app.use(webpackHotMiddleware(compiler));
-  app.get('*', (req, res) => {
-    res.write(middleware.fileSystem.readFileSync(path.join(__dirname, 'dist/index.html')));
-    res.end();
-  });
 } else {
   app.use(express.static(path.resolve(__dirname, '..', 'build')));
   app.get('*', (req, res) => {
-    res.sendFile(path.resolve(__dirname, '..', 'build', 'index.html'));
+    res.sendFile(path.resolve(__dirname, '..', 'build', 'index.hbs'));
   });
 }
 
 
-app.listen(port, '0.0.0.0', function onStart(err) {
+app.listen(port, '0.0.0.0', (err) => {
   if (err) {
     console.log(err);
   }

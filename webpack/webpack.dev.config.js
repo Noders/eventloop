@@ -13,31 +13,35 @@ var cssnext = require('postcss-cssnext');
 var nested = require('postcss-nested');
 var postcssAssets = require('postcss-assets');
 
-// var colors = require('colors');
+var manifest = require('./dll/vendor-manifest.json');
 
 var postCSSConfig = () => {
   return [nested, cssnext(), postcssAssets()];
 };
 
 module.exports = {
+  cache: true,
   devtool: 'cheap-source-map',
-  entry: './src/app.js',
+  entry: [
+    'webpack-hot-middleware/client',
+    path.resolve(__dirname, '..', 'src', 'app.js')
+  ],
   output: {
-    path: path.resolve(__dirname, 'build'),
+    path: path.resolve(__dirname, '..', 'build'),
     publicPath: '/',
-    filename: 'bundle.js'
+    filename: 'bundle_[name]_[hash].js'
   },
   plugins: [
     new HtmlWebpackPlugin({
       hash: true,
-      // filename: path.resolve(__dirname, '..', 'src', 'build', 'index.html'),
       template: path.resolve(__dirname, '..', 'src', 'template', 'index.hbs')
     }),
     new ExtractTextPlugin({
-      filename: 'styles.css', allChunks: true
+      filename: 'styles.css',
+      allChunks: true
     }),
     new webpack.LoaderOptionsPlugin({
-      minimize: process.env.NODE_ENV === 'production',
+      minimize: false,
       options: {
         context: path.join(__dirname, '..', 'src'),
         output: {
@@ -82,11 +86,16 @@ module.exports = {
         windows: false
       }
     }),
+    new webpack.HotModuleReplacementPlugin(),
     new webpack.DefinePlugin({
       'process.env': {
         NODE_ENV: JSON.stringify('development'),
         BABEL_ENV: JSON.stringify('development')
       }
+    }),
+    new webpack.DllReferencePlugin({
+      context: path.join(__dirname, 'build'),
+      manifest
     })
   ],
   resolve: {
@@ -115,6 +124,7 @@ module.exports = {
         exclude: /(node_modules|bower_components)/,
         loader: 'babel',
         query: {
+          cacheDirectory: true,
           presets: ['es2015', 'react', 'react-hmre']
         }
       }, {
