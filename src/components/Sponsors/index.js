@@ -4,6 +4,7 @@ import microsoft from '../../images/microsoft.png';
 import uss from '../../images/uss.png';
 import pageload from '../../images/pageload.png';
 import mediastream from '../../images/mediastream.png';
+import frontendmasters from '../../images/frontendmasters.png';
 
 // Partners
 import noders from '../../images/noders.png';
@@ -22,7 +23,7 @@ export default class Sponsors extends Component {
     return (
       <section id="first" className="main special">
         <header className="major">
-          <h2>Nuestros Sponsors</h2>
+          <h2>Sponsors</h2>
         </header>
         <div className={style.body}>
           <a className={style.imageLinks} href="http://www.microsoft.com">
@@ -36,6 +37,9 @@ export default class Sponsors extends Component {
           </a>
           <a className={style.imageLinks} href="http://www.mediastre.am">
             <img src={mediastream} alt="mediastream" className={style.images} />
+          </a>
+          <a className={style.imageLinks} href="http://www.frontendmasters.com">
+            <img src={frontendmasters} alt="mediastream" className={style.images} />
           </a>
         </div>
         <br />

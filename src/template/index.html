@@ -18,6 +18,16 @@
     <meta name="twitter:title" content="Hackaton, Santiago, 26 y 27 de Nov! Por y para developers">
     <meta name="twitter:description" content="Eventloop - La hackaton gratuita por y para developers. 24 horas de desafíos, pizza, café y código! Charlas geniales, los mejores sponsors, y claro... stickers! Pide tu entrada gratis ahora!">
     <meta name="twitter:image" content="https://docs.google.com/drawings/d/1eEnFXcJMtt8m-VK5n0jkA4duEROKBcZ_jfW16IKuGGU/pub?w=560&h=300">
+    <script>
+      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+      (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+      m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+      })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+      ga('create', 'UA-86285313-1', 'auto');
+      ga('send', 'pageview');
+
+    </script>
 
     <title>Noders + Eventloop</title>
     <style media="screen" id="body">
@@ -30,24 +40,36 @@
       }
     </style>
     <style id="loader">
+      .centerer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 100vh;
+        width: 100vw;
+      }
+      .centerer h1 {
+        font-family: arial;
+        font-size: 2.4em;
+        color: white;
+      }
       .spinner {
-        width: 8em;
-        height: 8em;
-        margin: auto;
-        position: absolute;
-        top: 0; left: 0; bottom: 0; right: 0;
+        width: 50vh;
+        height: 50vh;
+        max-width: 8em;
+        max-height: 8em;
       }
 
       .double-bounce1, .double-bounce2 {
-        width: 100%;
-        height: 100%;
+        width: 50vh;
+        height: 50vh;
+        max-width: 8em;
+        max-height: 8em;
         border-radius: 50%;
+        margin: auto auto;
         background-color: #fff;
         opacity: 0.6;
-        position: absolute;
-        top: 0;
-        left: 0;
-
+        position: fixed;
         -webkit-animation: sk-bounce 2.0s infinite ease-in-out;
         animation: sk-bounce 2.0s infinite ease-in-out;
       }
@@ -75,9 +97,12 @@
   </head>
   <body>
     <div id="app">
-      <div class="spinner">
-        <div class="double-bounce1"></div>
-        <div class="double-bounce2"></div>
+      <div class="centerer">
+        <div class="spinner">
+          <div class="double-bounce1"></div>
+          <div class="double-bounce2"></div>
+        </div>
+        <!--h1>Un momento...</h1-->
       </div>
     </div>
   </body>
