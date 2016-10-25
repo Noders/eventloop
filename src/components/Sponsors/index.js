@@ -50,7 +50,7 @@ export default class Sponsors extends Component {
           <a className={style.imageLinks} href="http://www.noders.com">
             <img src={noders} alt="noders" className={style.imagesSponsors} />
           </a>
-          <a className={style.imageLinks} href="http://www.proin.cl">
+          <a className={style.imageLinks} href="http://www.programadores.cl/">
             <img src={proin} alt="proin" className={style.imagesSponsors} />
           </a>
           <a className={style.imageLinks} href="http://www.ivdevs.cl">
