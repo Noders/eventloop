@@ -5,6 +5,7 @@ import uss from '../../images/uss.png';
 import pageload from '../../images/pageload.png';
 import mediastream from '../../images/mediastream.png';
 import frontendmasters from '../../images/frontendmasters.png';
+import codeschool from '../../images/codeschool.png';
 
 // Partners
 import noders from '../../images/noders.png';
@@ -39,7 +40,10 @@ export default class Sponsors extends Component {
             <img src={mediastream} alt="mediastream" className={style.images} />
           </a>
           <a className={style.imageLinks} href="http://www.frontendmasters.com">
-            <img src={frontendmasters} alt="mediastream" className={style.images} />
+            <img src={frontendmasters} alt="frontend masters" className={style.images} />
+          </a>
+          <a className={style.imageLinks} href="http://www.codeschool.com">
+            <img src={codeschool} alt="codeschool" className={style.images} />
           </a>
         </div>
         <br />
