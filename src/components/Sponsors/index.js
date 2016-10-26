@@ -11,6 +11,7 @@ import codeschool from '../../images/codeschool.png';
 import noders from '../../images/noders.png';
 import proin from '../../images/proin.png';
 import ivdevs from '../../images/ivdevs.png';
+import android from '../../images/android_chile.png';
 
 import style from './style.css';
 
@@ -53,6 +54,9 @@ export default class Sponsors extends Component {
         <div className={style.body}>
           <a className={style.imageLinks} href="http://www.noders.com">
             <img src={noders} alt="noders" className={style.imagesSponsors} />
+          </a>
+          <a className={style.imageLinks} href="http://www.androidchile.org">
+            <img src={android} alt="noders" className={style.imagesSponsors} />
           </a>
           <a className={style.imageLinks} href="http://www.programadores.cl/">
             <img src={proin} alt="proin" className={style.imagesSponsors} />
