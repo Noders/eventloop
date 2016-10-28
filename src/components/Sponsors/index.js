@@ -25,20 +25,26 @@ export default class Sponsors extends Component {
     return (
       <section id="first" className="main special">
         <header className="major">
-          <h2>Sponsors</h2>
+          <h2>Platinum Sponsors</h2>
         </header>
         <div className={style.body}>
           <a className={style.imageLinks} href="http://www.microsoft.com">
-            <img src={microsoft} alt="microsoft" className={style.images} />
+            <img src={microsoft} alt="microsoft" className={[style.images, style.big].join(' ')} />
           </a>
+          <a className={style.imageLinks} href="http://www.mediastre.am">
+            <img src={mediastream} alt="mediastream" className={[style.images, style.big].join(' ')} />
+          </a>
+        </div>
+        <br />
+        <header className="major">
+          <h2>Gold Sponsors</h2>
+        </header>
+        <div className={style.body}>
           <a className={style.imageLinks} href="http://www.uss.cl">
             <img src={uss} alt="universidad san sebastian" className={style.images} />
           </a>
           <a className={style.imageLinks} href="http://www.pageload.io">
             <img src={pageload} alt="pageload" className={style.images} />
-          </a>
-          <a className={style.imageLinks} href="http://www.mediastre.am">
-            <img src={mediastream} alt="mediastream" className={style.images} />
           </a>
           <a className={style.imageLinks} href="http://www.frontendmasters.com">
             <img src={frontendmasters} alt="frontend masters" className={style.images} />
