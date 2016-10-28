@@ -41,7 +41,7 @@ export default class Offer extends Component {
 
   render () {
     return (
-      <section id="second" className="main special">
+      <section id="venue" className="main special">
         <header className="major">
           <h2>Lugar</h2>
           <p>
