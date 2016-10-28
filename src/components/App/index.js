@@ -5,6 +5,7 @@ import Intro from '../Intro';
 import Footer from '../Footer';
 import Sponsors from '../Sponsors';
 import Offer from '../Offer';
+import Venue from '../Venue';
 import Ticket from '../Ticket';
 import Questions from '../Questions';
 
@@ -22,6 +23,7 @@ export default class App extends Component {
           <Intro />
           <Sponsors />
           <Offer />
+          <Venue />
           <Ticket />
           <Questions />
         </div>

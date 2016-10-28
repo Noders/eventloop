@@ -59,7 +59,7 @@ export default class Sponsors extends Component {
         </header>
         <div className={style.body}>
           <a className={style.imageLinks} href="http://www.noders.com">
-            <img src={noders} alt="noders" className={style.imagesSponsors} />
+            <img src={noders} alt="noders" className={[style.imagesSponsors, style.noders].join(' ')} />
           </a>
           <a className={style.imageLinks} href="http://www.androidchile.org">
             <img src={android} alt="noders" className={style.imagesSponsors} />
