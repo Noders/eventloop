@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 
+import style from './style.css';
+
 export default class Offer extends Component {
   constructor (props) {
     super(props);
@@ -50,6 +52,36 @@ export default class Offer extends Component {
           Nos gustar participar y realizar eventos! Nos encanta estar organizando actividades, pero somos antes que nada Developers, Ingenieros, Diseñadores, Geeks. Hacemos la comunidad de las que nos gusta participar.
           <br />
         </p>
+        <header className="major">
+          <h2>Premios</h2>
+        </header>
+        <p>
+          Wow, quieres algo más despues de todo lo que comentamos arriba?
+          No hay problema! Te tenemos cubierto!
+        </p>
+        <p className={style.column}>
+          <div className={style.columnItem}>
+            <span className={['icon', 'fa-home', style.icon].join(' ')} />
+            <span className={style.text}>Mentoría y espacio @ 'Diego`s Cowork'</span>
+          </div>
+          <div className={style.columnItem}>
+            <span className={['icon', 'fa-graduation-cap', style.icon].join(' ')} />
+            <span className={style.text}>Cuentas de FrontendMasters</span>
+          </div>
+          <div className={style.columnItem}>
+            <span className={['icon', 'fa-book', style.icon].join(' ')} />
+            <span className={style.text}>Cuentas de CodeSchool</span>
+          </div>
+          <div className={style.columnItem}>
+            <span className={['icon', 'fa-windows', style.icon].join(' ')} />
+            <span className={style.text}>Créditos de Azure</span>
+          </div>
+          <div className={style.columnItem}>
+            <span className={['icon', 'fa-windows', style.icon].join(' ')} />
+            <span className={style.text}>Créditos de Azure</span>
+          </div>
+        </p>
+        <br />
         <footer className="major">
           <ul className="actions">
             <li>
