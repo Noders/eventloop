@@ -19,8 +19,8 @@ export default class Ticket extends Component {
         <footer className="major">
           <ul className="actions">
             <li>
-              {/* href="https://ti.to/eventloop16/eventloop-16" */}
-              <a href="#tito" target="_blank" rel="noopener noreferrer"  className="button special">Inscríbete acá</a>
+              {/*  */}
+              <a href="https://ti.to/eventloop16/eventloop-16" target="_blank" rel="noopener noreferrer"  className="button special">Inscríbete acá</a>
             </li>
           </ul>
           <p>
