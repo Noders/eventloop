@@ -6,6 +6,7 @@ import pageload from '../../images/pageload.png';
 import mediastream from '../../images/mediastream.png';
 import frontendmasters from '../../images/frontendmasters.png';
 import codeschool from '../../images/codeschool.png';
+import balsamiq from '../../images/balsamiq.png';
 
 // Partners
 import noders from '../../images/noders.png';
@@ -45,14 +46,22 @@ export default class Sponsors extends Component {
           <a className={style.imageLinks} href="http://www.uss.cl">
             <img src={uss} alt="universidad san sebastian" className={style.images} />
           </a>
-          <a className={style.imageLinks} href="http://www.pageload.io">
-            <img src={pageload} alt="pageload" className={style.images} />
-          </a>
+        </div>
+        <header className="major">
+          <h2>Silver Sponsors</h2>
+        </header>
+        <div className={style.body}>
           <a className={style.imageLinks} href="http://www.frontendmasters.com">
             <img src={frontendmasters} alt="frontend masters" className={style.images} />
           </a>
           <a className={style.imageLinks} href="http://www.codeschool.com">
             <img src={codeschool} alt="codeschool" className={style.images} />
+          </a>
+          <a className={style.imageLinks} href="https://balsamiq.com/products/mockups/">
+            <img src={balsamiq} alt="balsamiq" className={style.images} />
+          </a>
+          <a className={style.imageLinks} href="http://www.pageload.io">
+            <img src={pageload} alt="pageload" className={style.images} />
           </a>
         </div>
         <br />
