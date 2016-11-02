@@ -64,7 +64,7 @@ export default class Offer extends Component {
         <div className={style.column}>
           <div className={style.columnItem}>
             <span className={['icon', 'fa-home', style.icon].join(' ')} />
-            <span className={style.text}>Mentoría en X Cowork</span>
+            <span className={style.text}>Mentoría en Edge Cowork</span>
           </div>
           <div className={style.columnItem}>
             <span className={['icon', 'fa-graduation-cap', style.icon].join(' ')} />
@@ -72,7 +72,7 @@ export default class Offer extends Component {
           </div>
           <div className={style.columnItem}>
             <span className={['icon', 'fa-home', style.icon].join(' ')} />
-            <span className={style.text}>Daily Pass - </span>
+            <span className={style.text}>Daily Passes en Edge Cowork </span>
           </div>
           <div className={style.columnItem}>
             <span className={['icon', 'fa-book', style.icon].join(' ')} />
