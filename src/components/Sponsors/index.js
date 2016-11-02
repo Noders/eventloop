@@ -13,6 +13,7 @@ import proin from '../../images/proin.png';
 import ivdevs from '../../images/ivdevs.png';
 import android from '../../images/android_chile.png';
 import womenwhocode from '../../images/womenwhocode.jpg';
+import javascriptchile from '../../images/javascriptchile.png';
 
 import style from './style.css';
 
@@ -73,6 +74,12 @@ export default class Sponsors extends Component {
           </a>
           <a className={style.imageLinks} href="https://www.meetup.com/es-ES/Women-Who-Code-Santiago/">
             <img src={womenwhocode} alt="iv devs" className={style.imagesSponsors} />
+          </a>
+          <a className={style.imageLinks} href="https://www.meetup.com/es-ES/Women-Who-Code-Santiago/">
+            <img src={womenwhocode} alt="Women Who Code Santiago" className={style.imagesSponsors} />
+          </a>
+          <a className={style.imageLinks} href="https://www.meetup.com/es/Javascript-Chile/">
+            <img src={javascriptchile} alt="JavaScript Chile" className={style.imagesSponsors} />
           </a>
         </div>
         <footer className="major">
