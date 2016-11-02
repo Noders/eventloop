@@ -1,0 +1,61 @@
+.dayContainer {
+  display: flex;
+}
+.day {
+  box-sizing: border-box;
+  margin: 1em;
+  background-image:
+      linear-gradient(#efa8b0, #a89cc8, #8cc9f0), linear-gradient(#efa8b0, #a89cc8, #8cc9f0);
+  -moz-background-size: 3px 100%;
+  background-size: 3px 100%;
+  background-position: 0 0, 100% 100%;
+  background-repeat: no-repeat;
+}
+@media (max-width: 700px) {
+  .dayContainer {
+    flex-direction: column;
+  }
+}
+.dayDescription {
+  font-size: 95%;
+}
+.dayText{
+  font-size: 160%;
+}
+.activities {
+  display: flex;
+  flex-flow: column;
+}
+.activity {
+  display: flex;
+  line-height: 2em;
+
+  flex-flow: column;
+  margin-left: 0.2em;
+  margin-right: 0.2em;
+  justify-content: flex-start;
+  padding: 1em;
+  text-align: left;
+  transition: background 200ms ease-in;
+
+}
+.activity:hover {
+  cursor: pointer;
+  background-color: #eff0f1;
+}
+.description {
+  margin-top: 1em;
+  padding-left: 0.6em;
+  font-size: 90%;
+  line-height: 2em;
+}
+.descriptionHidden {
+  max-height: 0;
+  overflow: hidden;
+}
+.descriptionShown {
+  max-height: 50em;
+  overflow: hidden;
+  border-left: #d6d6d6 2px solid;
+  transition: max-height 500ms ease-in;
+}

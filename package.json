@@ -7,6 +7,7 @@
     "start": "./node_modules/.bin/cross-env NODE_ENV=development node webpack",
     "build": "rimraf build && cross-env NODE_ENV=production webpack --config ./webpack/webpack.config.js --progress --colors",
     "copy": "./node_modules/.bin/copyfiles CNAME build/",
+    "yarn": "yarn",
     "build:dll": "webpack --config=./webpack/webpack.dll.js --progress --colors",
     "deploy": "./node_modules/.bin/gh-pages --dotfiles --dist ./build --branch gh-pages",
     "yolo": "npm run build && npm run copy && npm run deploy",
@@ -37,8 +38,10 @@
       ],
       "comma-dangle": [
         1,
-        "never"
+        "always-multiline"
       ],
+      "linebreak-style": 0,
+      "jsx-a11y/no-static-element-interactions": 0,
       "func-names": 1,
       "key-spacing": 1,
       "no-else-return": 1,

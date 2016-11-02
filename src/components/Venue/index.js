@@ -46,7 +46,7 @@ export default class Offer extends Component {
           <h2>Lugar</h2>
           <p>
             Nuestro venue para esta versión de Eventloop, será la <a href="https://goo.gl/RchBSZ" target="_blank" rel="noopener noreferrer">Universidad San Sebastián</a><br />
-            Bellavista Nº7 (A 2 cuadras de la estación de Metro Baquedano)
+            Bellavista Nº7 (Un par de cuadras de la estación de Metro Baquedano)
           </p>
         </header>
         <div className={style.mapContainer}>

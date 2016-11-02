@@ -56,31 +56,31 @@ export default class Offer extends Component {
           <h2>Premios</h2>
         </header>
         <p>
-          Wow, quieres algo más despues de todo lo que comentamos arriba?
+          Quieres algo más despues de todo lo que comentamos arriba?
           No hay problema! Te tenemos cubierto!
         </p>
-        <p className={style.column}>
+        <div className={style.column}>
           <div className={style.columnItem}>
             <span className={['icon', 'fa-home', style.icon].join(' ')} />
-            <span className={style.text}>Mentoría y espacio @ 'Diego`s Cowork'</span>
+            <span className={style.text}>Mentoría en X Cowork</span>
           </div>
           <div className={style.columnItem}>
             <span className={['icon', 'fa-graduation-cap', style.icon].join(' ')} />
-            <span className={style.text}>Cuentas de FrontendMasters</span>
+            <span className={style.text}>Cuentas FrontendMasters</span>
+          </div>
+          <div className={style.columnItem}>
+            <span className={['icon', 'fa-home', style.icon].join(' ')} />
+            <span className={style.text}>Daily Pass - </span>
           </div>
           <div className={style.columnItem}>
             <span className={['icon', 'fa-book', style.icon].join(' ')} />
-            <span className={style.text}>Cuentas de CodeSchool</span>
+            <span className={style.text}>Cuentas CodeSchool</span>
           </div>
           <div className={style.columnItem}>
             <span className={['icon', 'fa-windows', style.icon].join(' ')} />
             <span className={style.text}>Créditos de Azure</span>
           </div>
-          <div className={style.columnItem}>
-            <span className={['icon', 'fa-windows', style.icon].join(' ')} />
-            <span className={style.text}>Créditos de Azure</span>
-          </div>
-        </p>
+        </div>
         <br />
         <footer className="major">
           <ul className="actions">
