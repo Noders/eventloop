@@ -73,9 +73,6 @@ export default class Sponsors extends Component {
             <img src={ivdevs} alt="iv devs" className={style.imagesSponsors} />
           </a>
           <a className={style.imageLinks} href="https://www.meetup.com/es-ES/Women-Who-Code-Santiago/">
-            <img src={womenwhocode} alt="iv devs" className={style.imagesSponsors} />
-          </a>
-          <a className={style.imageLinks} href="https://www.meetup.com/es-ES/Women-Who-Code-Santiago/">
             <img src={womenwhocode} alt="Women Who Code Santiago" className={style.imagesSponsors} />
           </a>
           <a className={style.imageLinks} href="https://www.meetup.com/es/Javascript-Chile/">
