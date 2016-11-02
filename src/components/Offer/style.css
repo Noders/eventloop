@@ -1,0 +1,14 @@
+.column {
+  column-count: 3;
+  column-gap: 3em;
+}
+.columnItem {
+  padding: 1em;
+}
+.icon {
+  font-size: 1.3em;
+}
+.text {
+  padding-left: 1em;
+  font-size: 1.2em;
+}

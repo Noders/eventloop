@@ -19,6 +19,9 @@
   padding: 1em;
   transition: all .2s ease-in-out;
 }
+.big {
+  max-width: 21em;
+}
 
 .images:hover {
   transform: scale(1.1);
@@ -28,6 +31,9 @@
   max-width: 10em;
   padding: 1em;
   transition: all .2s ease-in-out;
+}
+.noders {
+  max-width: 18em;
 }
 .imagesSponsors:hover {
   transform: scale(1.1);
@@ -46,9 +52,15 @@
     max-width: 9em;
     padding: 0.7em;
   }
+  .big {
+    max-width: 12em;
+  }
   .imagesSponsors {
     max-width: 7em;
     padding: 0.7em;
+  }
+  .noders {
+    max-width: 13em;
   }
 }
 .subTitle {

@@ -22,6 +22,9 @@ export default class Nav extends Component {
             <a href="#second">Premios</a>
           </li>
           <li>
+            <a href="#venue">Como Llegar</a>
+          </li>
+          <li>
             <a href="#cta">Consigue tu entrada</a>
           </li>
           <li>
