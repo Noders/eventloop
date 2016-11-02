@@ -18,6 +18,8 @@ export default class Offer extends Component {
             Eres el dueño de todo lo que desarrolles. No catch!
             <br />
             Y lo mejor de todo? Gratis!
+            <br />
+            Quieres conocer las bases legales? Las tenemos <a href="https://github.com/fforres/eventloop/blob/master/legal.md" target="_blank" rel="noopener noreferrer" className="button">acá en GitHub.</a>
           </p>
         </header>
         <ul className="statistics">

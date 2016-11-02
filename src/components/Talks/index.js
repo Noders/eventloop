@@ -10,7 +10,7 @@ export default class Talks extends Component {
 
   render () {
     return (
-      <section id="second" className="main special">
+      <section id="talks" className="main special">
         <header className="major">
           <h2>Charlas</h2>
           <p>

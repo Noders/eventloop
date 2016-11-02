@@ -11,7 +11,7 @@ export default class Timeline extends Component {
 
   render () {
     return (
-      <section id="second" className="main special">
+      <section id="timeline" className="main special">
         <header className="major">
           <h2>Horarios</h2>
           <div className={style.dayContainer}>
