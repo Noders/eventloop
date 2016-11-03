@@ -16,6 +16,7 @@ import ivdevs from '../../images/ivdevs.png';
 import android from '../../images/android_chile.png';
 import womenwhocode from '../../images/womenwhocode.jpg';
 import javascriptchile from '../../images/javascriptchile.png';
+import beerjs from '../../images/beerjs.png';
 
 import style from './style.css';
 
@@ -90,6 +91,9 @@ export default class Sponsors extends Component {
           </a>
           <a className={style.imageLinks} href="https://www.meetup.com/es/Javascript-Chile/">
             <img src={javascriptchile} alt="JavaScript Chile" className={style.imagesSponsors} />
+          </a>
+          <a className={style.imageLinks} href="https://www.beerjs.cl/">
+            <img src={beerjs} alt="beer j.s." className={style.imagesSponsors} />
           </a>
         </div>
         <footer className="major">
