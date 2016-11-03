@@ -12,7 +12,7 @@ export default class Offer extends Component {
     return (
       <section id="second" className="main special">
         <header className="major">
-          <h2>¿Qué ofecemos?</h2>
+          <h2>¿Qué ofrecemos?</h2>
           <p>
             Ofrecemos una experiencia genial! Creada por y para developers, para crear soluciones utilizando las últimas tecnologías<br />
             Eres el dueño de todo lo que desarrolles. No catch!
