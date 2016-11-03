@@ -124,7 +124,7 @@ module.exports = {
         test: /\.(ttf|eot|svg|ttf|otf|woff(2)?)(\?[a-z0-9=&.]+)?$/,
         loader: 'file-loader'
       }, {
-        test: /\.(jpg|png|gif)$/,
+        test: /\.(jpg|jpeg|png|gif)$/,
         loaders: ['file-loader', 'image-webpack?{progressive:true, optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}}']
       }, {
         test: /\.js$/,

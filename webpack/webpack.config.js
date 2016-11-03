@@ -24,7 +24,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '..', 'build'),
     publicPath: '/',
-    filename: 'bundle_[name]_[hash].js'
+    filename: 'bundle_[name]_[hash].js',
   },
   plugins: [
     new HtmlWebpackPlugin({
@@ -39,33 +39,33 @@ module.exports = {
         keepClosingSlash: true,
         minifyJS: true,
         minifyCSS: true,
-        minifyURLs: true
+        minifyURLs: true,
       },
       inject: true,
-      template: path.resolve(__dirname, '..', 'src', 'template', 'index.html')
+      template: path.resolve(__dirname, '..', 'src', 'template', 'index.html'),
     }),
     new ScriptExtHtmlWebpackPlugin({
-      defaultAttribute: 'defer'
+      defaultAttribute: 'defer',
     }),
     new ExtractTextPlugin({
       filename: 'styles.css',
-      allChunks: true
+      allChunks: true,
     }),
     new webpack.LoaderOptionsPlugin({
       minimize: true,
       options: {
         context: path.join(__dirname, '..', 'src'),
         output: {
-          path: path.join(__dirname, '..', 'build')
+          path: path.join(__dirname, '..', 'build'),
         },
         babel: {
           presets: [
-            'es2015', 'stage-0'
+            'es2015', 'stage-0',
           ],
-          plugins: ['transform-runtime']
+          plugins: ['transform-runtime'],
         },
-        postcss: postCSSConfig
-      }
+        postcss: postCSSConfig,
+      },
     }),
     new FaviconsWebpackPlugin({
       // Your source logo
@@ -141,7 +141,7 @@ module.exports = {
         test: /\.(ttf|eot|svg|ttf|otf|woff(2)?)(\?[a-z0-9=&.]+)?$/,
         loader: 'file-loader'
       }, {
-        test: /\.(jpg|png|gif)$/,
+        test: /\.(jpg|jpeg|png|gif)$/,
         loaders: ['file-loader', 'image-webpack?{progressive:true, optimizationLevel: 7, interlaced: false, pngquant:{quality: "65-90", speed: 4}}']
       }, {
         test: /\.js$/,
