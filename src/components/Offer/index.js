@@ -63,6 +63,10 @@ export default class Offer extends Component {
         </p>
         <div className={style.column}>
           <div className={style.columnItem}>
+            <span className={['icon', 'fa-windows', style.icon].join(' ')} />
+            <span className={style.text}>Créditos de Azure</span>
+          </div>
+          <div className={style.columnItem}>
             <span className={['icon', 'fa-home', style.icon].join(' ')} />
             <span className={style.text}>Mentoría en Edge Cowork</span>
           </div>
@@ -79,8 +83,12 @@ export default class Offer extends Component {
             <span className={style.text}>Cuentas CodeSchool</span>
           </div>
           <div className={style.columnItem}>
-            <span className={['icon', 'fa-windows', style.icon].join(' ')} />
-            <span className={style.text}>Créditos de Azure</span>
+            <span className={['icon', 'fa-github', style.icon].join(' ')} />
+            <span className={style.text}>Cuentas de Github</span>
+          </div>
+          <div className={style.columnItem}>
+            <span className={['icon', 'fa-hand-spock-o', style.icon].join(' ')} />
+            <span className={style.text}>Stickers y Swag !!</span>
           </div>
         </div>
         <br />
