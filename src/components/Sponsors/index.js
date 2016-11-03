@@ -47,11 +47,8 @@ export default class Sponsors extends Component {
           <h2>Silver Sponsors</h2>
         </header>
         <div className={style.body}>
-          <a className={style.imageLinks} href="http://www.frontendmasters.com">
-            <img src={edge} alt="frontend masters" className={style.images} />
-          </a>
-          <a className={style.imageLinks} href="http://www.frontendmasters.com">
-            <img src={frontendmasters} alt="frontend masters" className={style.images} />
+          <a className={style.imageLinks} href="http://edgecowork.com/">
+            <img src={edge} alt="Edge Cowork" className={style.images} />
           </a>
           <a className={style.imageLinks} href="http://www.frontendmasters.com">
             <img src={frontendmasters} alt="frontend masters" className={style.images} />
