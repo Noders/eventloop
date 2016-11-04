@@ -28,6 +28,9 @@ export default class Community extends Component {
           <a className={style.imageLinks} href="http://www.noders.com">
             <img src={noders} alt="noders" className={[style.imagesSponsors, style.noders].join(' ')} />
           </a>
+          <a className={style.imageLinks} href="https://www.meetup.com/es/Javascript-Chile/">
+            <img src={javascriptchile} alt="JavaScript Chile" className={style.imagesSponsors} />
+          </a>
           <a className={style.imageLinks} href="http://www.ivdevs.cl">
             <img src={ivdevs} alt="iv devs" className={[style.imagesSponsors, style.noders].join(' ')} />
           </a>
@@ -37,12 +40,8 @@ export default class Community extends Component {
           <a className={style.imageLinks} href="http://www.programadores.cl/">
             <img src={proin} alt="proin" className={style.imagesSponsors} />
           </a>
-
           <a className={style.imageLinks} href="https://www.meetup.com/es-ES/Women-Who-Code-Santiago/">
             <img src={womenwhocode} alt="Women Who Code Santiago" className={style.imagesSponsors} />
-          </a>
-          <a className={style.imageLinks} href="https://www.meetup.com/es/Javascript-Chile/">
-            <img src={javascriptchile} alt="JavaScript Chile" className={style.imagesSponsors} />
           </a>
           <a className={style.imageLinks} href="https://www.beerjs.cl/">
             <img src={beerjs} alt="beer j.s." className={style.imagesSponsors} />
@@ -55,36 +54,3 @@ export default class Community extends Component {
     );
   }
 }
-
-
-/*
-<section id="first" className="main special">
-  <header className="major">
-    <h2>Nuestros Sponsors</h2>
-  </header>
-  <ul className="features">
-    <li>
-      <span className="icon major style1 fa-code" />
-      <h3>Ipsum consequat</h3>
-      <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-    </li>
-    <li>
-      <span className="icon major style3 fa-copy" />
-      <h3>Amed sed feugiat</h3>
-      <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-    </li>
-    <li>
-      <span className="icon major style5 fa-diamond" />
-      <h3>Dolor nullam</h3>
-      <p>Sed lorem amet ipsum dolor et amet nullam consequat a feugiat consequat tempus veroeros sed consequat.</p>
-    </li>
-  </ul>
-  <footer className="major">
-    <ul className="actions">
-      <li>
-        <a href="generic.html" className="button">Learn More</a>
-      </li>
-    </ul>
-  </footer>
-</section>
-*/
