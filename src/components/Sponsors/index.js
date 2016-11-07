@@ -7,7 +7,6 @@ import mediastream from '../../images/mediastream.png';
 import frontendmasters from '../../images/frontendmasters.png';
 import codeschool from '../../images/codeschool.png';
 import balsamiq from '../../images/balsamiq.png';
-import GitHub from '../../images/GitHub.png';
 import edge from '../../images/edge.png';
 
 import Community from './community';
@@ -53,9 +52,9 @@ export default class Sponsors extends Component {
           <a className={style.imageLinks} href="http://www.frontendmasters.com">
             <img src={frontendmasters} alt="frontend masters" className={style.images} />
           </a>
-          <a className={style.imageLinks} href="http://www.github.com">
+          {/* <a className={style.imageLinks} href="http://www.github.com">
             <img src={GitHub} alt="github" className={style.images} />
-          </a>
+          </a> */}
           <a className={style.imageLinks} href="http://www.codeschool.com">
             <img src={codeschool} alt="codeschool" className={style.images} />
           </a>

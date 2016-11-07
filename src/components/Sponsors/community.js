@@ -9,6 +9,7 @@ import womenwhocode from '../../images/womenwhocode.jpg';
 import javascriptchile from '../../images/javascriptchile.png';
 import beerjs from '../../images/beerjs.png';
 import hybrid from '../../images/hybrid.jpeg';
+import GitHub from '../../images/GitHub.png';
 
 import style from './style.css';
 
@@ -43,8 +44,11 @@ export default class Community extends Component {
           <a className={style.imageLinks} href="https://www.meetup.com/es-ES/Women-Who-Code-Santiago/">
             <img src={womenwhocode} alt="Women Who Code Santiago" className={style.imagesSponsors} />
           </a>
-          <a className={style.imageLinks} href="https://www.beerjs.cl/">
-            <img src={beerjs} alt="beer j.s." className={style.imagesSponsors} />
+          <a className={style.imageLinks} href="http://www.beerjs.cl/">
+            <img src={beerjs} alt="Beer J.S." className={style.imagesSponsors} />
+          </a>
+          <a className={style.imageLinks} href="https://www.Github.com/">
+            <img src={GitHub} alt="GitHub" className={style.imagesSponsors} />
           </a>
           <a className={style.imageLinks} href="http://www.meetup.com/es-ES/Hybrid-Apps-Chile/">
             <img src={hybrid} alt="Hybrid Apps Chile" className={style.imagesSponsors} />
