@@ -8,6 +8,7 @@ import frontendmasters from '../../images/frontendmasters.png';
 import codeschool from '../../images/codeschool.png';
 import balsamiq from '../../images/balsamiq.png';
 import edge from '../../images/edge.png';
+import GitHub from '../../images/GitHub.png';
 
 import Community from './community';
 
