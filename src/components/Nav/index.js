@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import style from './style.css';
 
 export default class Nav extends Component {
   constructor (props) {
@@ -10,7 +11,7 @@ export default class Nav extends Component {
 
   render () {
     return (
-      <nav id="nav">
+      <nav id="nav" className={style.appear}>
         <ul>
           <li>
             <a href="#intro" className="active">Introduction</a>

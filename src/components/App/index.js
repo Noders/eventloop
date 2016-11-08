@@ -10,6 +10,8 @@ import Venue from '../Venue';
 import Ticket from '../Ticket';
 import Questions from '../Questions';
 
+import style from './style.css';
+
 export default class App extends Component {
   constructor (props) {
     super(props);
@@ -20,7 +22,7 @@ export default class App extends Component {
       <div id="wrapper">
         <Header />
         <Nav />
-        <div id="main">
+        <div id="main" className={style.appear}>
           <Intro />
           <Sponsors />
           <Offer />
