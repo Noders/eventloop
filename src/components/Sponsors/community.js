@@ -7,6 +7,7 @@ import ivdevs from '../../images/ivdevs.png';
 import android from '../../images/android_chile.png';
 import womenwhocode from '../../images/womenwhocode.jpg';
 import javascriptchile from '../../images/javascriptchile.png';
+import progamadores from '../../images/ProGramadores.png';
 import beerjs from '../../images/beerjs.png';
 import hybrid from '../../images/hybrid.jpeg';
 
@@ -49,6 +50,10 @@ export default class Community extends Component {
           <a className={style.imageLinks} href="http://www.meetup.com/es-ES/Hybrid-Apps-Chile/">
             <img src={hybrid} alt="Hybrid Apps Chile" className={style.imagesSponsors} />
           </a>
+          <a className={style.imageLinks} href="http://www.meetup.com/es/pgramadores/">
+            <img src={progamadores} alt="PRO-Gramadores" className={style.imagesSponsors} />
+          </a>
+
         </div>
       </div>
     );
