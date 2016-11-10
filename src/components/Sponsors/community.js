@@ -51,7 +51,7 @@ export default class Community extends Component {
             <img src={hybrid} alt="Hybrid Apps Chile" className={style.imagesSponsors} />
           </a>
           <a className={style.imageLinks} href="http://www.meetup.com/es/pgramadores/">
-            <img src={progamadores} alt="PRO-Gramadores" className={style.imagesSponsors} />
+            <img src={progamadores} alt="PRO-Gramadores" className={[style.imagesSponsors, style.noders].join(' ')} />
           </a>
 
         </div>
