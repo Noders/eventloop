@@ -8,6 +8,12 @@ import './css/fonts.css';
 import App from './components/App';
 import js from './js';
 
+import offline from 'offline-plugin/runtime';
+
+if (process.env.NODE_ENV === 'production') {
+  offline.install();
+}
+
 js.then(() => {
   const containerEl = document.getElementById('app');
   render(

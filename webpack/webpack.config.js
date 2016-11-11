@@ -12,6 +12,7 @@ var ScriptExtHtmlWebpackPlugin = require('script-ext-html-webpack-plugin');
 var cssnext = require('postcss-cssnext');
 var nested = require('postcss-nested');
 var postcssAssets = require('postcss-assets');
+var OfflinePlugin = require('offline-plugin');
 
 
 function postCSSConfig () {
@@ -118,7 +119,8 @@ module.exports = {
         NODE_ENV: JSON.stringify('production'),
         BABEL_ENV: JSON.stringify('production')
       }
-    })
+    }),
+    new OfflinePlugin(),
   ],
   resolve: {
     alias: {
