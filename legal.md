@@ -48,10 +48,10 @@ Se requiere por proyecto para la evaluación:
 - El panel de jueces está definido por la organización, y representantes de los sponsors. *** (Don't worry. Es gente que sabe que distinguir un -for- de un -while-) ***
 - La evaluación de los proyectos está definida por:
   - ** 20 puntos ** - Diseño de la solución.
-  - ** 20 puntos ** - Originalidad / Innovación / Creatividad.
-  - ** 25 puntos ** - Practicalidad.
-  - ** 25 puntos ** - Calidad del código.
-  - ** 30 puntos ** - Uso de Tecnologías
+  - ** 25 puntos ** - Originalidad / Innovación / Creatividad.
+  - ** 20 puntos ** - Practicalidad.
+  - ** 20 puntos ** - Calidad del código.
+  - ** 35 puntos ** - Uso de Tecnologías y APIs
 
 
 #### <a name="publicity_and_privacy"></a>Publicidad y privacidad
