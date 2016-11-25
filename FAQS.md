@@ -32,7 +32,7 @@ Nah... tambien tenemos unos premios para regalar!
 - Cuentas CodeSchool
 - Cuentas de Github
 - Stickers.
-- Swag y Poleras.
+- Swag.
 
 Eso aparte del feedback de ingenieros, desarrolladores y mentores de primer nivel.
 
