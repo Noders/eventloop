@@ -25,7 +25,7 @@ module.exports = {
   output: {
     path: path.resolve(__dirname, '..', 'build'),
     publicPath: '/',
-    filename: 'bundle_[name]_[hash].js',
+    filename: 'eventloop_bundle_[name]_[hash].js',
   },
   plugins: [
     new HtmlWebpackPlugin({
