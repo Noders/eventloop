@@ -12,3 +12,17 @@
   max-width: 21em;
   width: 50vw;
 }
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.iframe {
+  width: 90vw;
+  height: 70vh;
+  margin-bottom: 6em;
+  margin-top: 3em;
+}
