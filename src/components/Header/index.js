@@ -13,7 +13,7 @@ export default class Header extends Component {
   render () {
     return (
       <header id="header" className={css.header}>
-        <iframe src="http://mdstrm.com/live-stream/582a227de9ac82db08896abd" className={css.iframe} />
+        <iframe src="http://mdstrm.com/live-stream/582a227de9ac82db08896abd" allowfullscreen className={css.iframe} />
         <span className="logo">
           <img src={image} alt="eventloop logo" className={css.image} />
         </span>
