@@ -47,11 +47,11 @@ Se requiere por proyecto para la evaluación:
 - Los ganadores de la hackaton serán seleccionados por el panel de jueces del evento.
 - El panel de jueces está definido por la organización, y representantes de los sponsors. *** (Don't worry. Es gente que sabe que distinguir un -for- de un -while-) ***
 - La evaluación de los proyectos está definida por:
-  - ** 20 puntos ** - Diseño de la solución.
-  - ** 25 puntos ** - Originalidad / Innovación / Creatividad.
-  - ** 20 puntos ** - Practicalidad.
+  - ** 05 puntos ** - Diseño de la solución.
+  - ** 20 puntos ** - Originalidad / Innovación / Creatividad.
+  - ** 15 puntos ** - Practicalidad.
   - ** 20 puntos ** - Calidad del código.
-  - ** 35 puntos ** - Uso de Tecnologías y APIs
+  - ** 40 puntos ** - Uso de Tecnologías y APIs
 
 
 #### <a name="publicity_and_privacy"></a>Publicidad y privacidad
